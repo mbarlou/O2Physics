@@ -14,6 +14,11 @@ o2physics_add_dpl_workflow(mc-spectra-efficiency
                     PUBLIC_LINK_LIBRARIES O2::Framework O2::DetectorsBase O2Physics::AnalysisCore
                     COMPONENT_NAME Analysis)
 
+o2physics_add_dpl_workflow(v0skimming
+                    SOURCES lambdakzeroskimming.cxx
+                    PUBLIC_LINK_LIBRARIES O2::Framework O2::DetectorsBase O2Physics::AnalysisCore
+                    COMPONENT_NAME Analysis)                   
+
 o2physics_add_dpl_workflow(spectra-tof
                     SOURCES spectraTOF.cxx
                     PUBLIC_LINK_LIBRARIES O2::Framework O2::DetectorsBase O2Physics::AnalysisCore
