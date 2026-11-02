@@ -145,13 +145,11 @@ struct StronglyIntensiveCorr {
     // DeltaEta = 0.0, 0.2, ..., 1.2.
     std::vector<double> physicalGapEdges = {
       -0.1, 0.1, 0.3, 0.5,
-       0.7, 0.9, 1.1, 1.3
-    };
+      0.7, 0.9, 1.1, 1.3};
 
     AxisSpec physicalGapAxis = {
       physicalGapEdges,
-      "#Delta#eta"
-    };
+      "#Delta#eta"};
     AxisSpec nAxis = {500, 0.0, 500.0, "N"};
     AxisSpec counterAxis = {20, 0.5, 20.5, "counter"};
     AxisSpec ptAxis = {{0.2, 0.5, 0.8, 1.0, 1.5, 2.0, 5.0}, "#it{p}_{T} (GeV/#it{c})"};
@@ -659,10 +657,8 @@ struct StronglyIntensiveCorr {
   {
     for (int i = 0; i < NEtaGaps; ++i) {
       const double gap =
-        2.0 * (
-          etaCenter[i] -
-          cfgEtaWidth.value / 2.0
-        );
+        2.0 * (etaCenter[i] -
+               cfgEtaWidth.value / 2.0);
 
       // etaCenter = 0 corresponds to overlapping windows and
       // gives DeltaEta = -0.2. Keep only the seven physical,
